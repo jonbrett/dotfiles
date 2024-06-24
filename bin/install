@@ -1,0 +1,37 @@
+#!/bin/bash
+set -e
+
+function exit_error()
+{
+    echo "$*"
+    exit 1;
+}
+
+# Required for installation process
+# For ag:
+#     apt install -y build-essential automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+PREREQUISTES="gcc automake"
+
+# Applications to install with asdf
+ASDF_PLUGINS="fd ripgrep neovim tree-sitter"
+
+# Check prerequisites
+for app in $PREREQUISTES; do
+    which $app 2>&1 > /dev/null || exit_error "Prerequisite $app is not installed"
+done
+
+# Install asdf
+if [ -d ~/.asdf ]; then
+    git -C ~/.asdf pull
+else
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+fi
+. "$HOME/.asdf/asdf.sh"
+
+# Install asdf applications
+for plugin in $ASDF_PLUGINS; do
+    asdf plugin add $plugin
+    asdf install $plugin latest
+    asdf global $plugin latest
+done
+
