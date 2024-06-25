@@ -1,0 +1,16 @@
+# ls aliases
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias la='ls -la'
+
+# grep aliases
+alias grep='grep --color=auto'
+
+# git aliases
+alias gl='git log --graph --decorate --oneline'
+alias gla='git log --graph --decorate --oneline --all'
+
+# tmux aliases
+alias tn='tmux new -s'
+alias ta='tmux attach -t'
+alias tl='tmux list-sessions'
