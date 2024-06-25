@@ -11,3 +11,6 @@ export LC_ALL='en_US.UTF-8';
 
 # Default editor as vim
 export EDITOR='vim'
+
+# ssh-agent
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"

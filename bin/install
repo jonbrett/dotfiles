@@ -36,3 +36,6 @@ for plugin in $ASDF_PLUGINS; do
     asdf global $plugin latest
 done
 
+# Add ssh-agent service to user systemd
+# (Installed as .config/systemd/user/ssh-agent.service)
+systemctl --user enable --now ssh-agent
