@@ -13,7 +13,7 @@ function exit_error()
 PREREQUISTES="gcc automake"
 
 # Applications to install with asdf
-ASDF_PLUGINS="fd ripgrep neovim tree-sitter"
+ASDF_PLUGINS="fd ripgrep neovim tree-sitter lazygit"
 
 # Check prerequisites
 for app in $PREREQUISTES; do
