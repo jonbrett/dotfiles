@@ -1,7 +1,7 @@
 # Convenience function for git operations on dotfiles repo
 # https://www.atlassian.com/git/tutorials/dotfiles
 function config {
-   git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
+   git --git-dir=$HOME/.cfg/ --work-tree=$HOME "$@"
 }
 
 # Asdf functions
