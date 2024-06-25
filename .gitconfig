@@ -1,0 +1,19 @@
+[user]
+	email = jonbrett.dev@gmail.com
+	name = Jon Brett
+[color]
+	ui = true
+[diff]
+	colorMoved = zebra
+[alias]
+	s = status
+	b = branch
+	co = checkout
+[push]
+	default = tracking
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[include]
+    path = .gitconfig.extra
