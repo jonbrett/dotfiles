@@ -1,0 +1,21 @@
+defscrollback 30000
+
+# Enable putty scrollback
+# https://serverfault.com/questions/32313/putty-and-screen-and-scroll-back-buffer)
+termcapinfo xterm* ti@:te@
+termcapinfo putty ti@:te@
+
+# Allow 256 color terminal
+term screen-256color
+
+hardstatus alwayslastline
+
+vbell "off"
+
+# Allow editors etc. to restore display on exit
+# rather than leaving existing text in place
+altscreen on
+
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{= KW}[%`] %{= Kw}|%{-} %-Lw%{= bW}%n%f %t%{-}%+Lw %=%C%a %Y-%M-%d"
