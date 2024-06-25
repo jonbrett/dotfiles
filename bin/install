@@ -8,8 +8,8 @@ function exit_error()
 }
 
 # Required for installation process
-# For ag:
-#     apt install -y build-essential automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+# Usually these can be resolved (on Ubuntu) by:
+#     apt install -y build-essential automake
 PREREQUISTES="gcc automake"
 
 # Applications to install with asdf
