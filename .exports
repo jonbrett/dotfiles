@@ -5,10 +5,6 @@ export HISTCONTROL=ignoreboth
 HISTSIZE=65536
 HISTFILESIZE=${HISTSIZE}
 
-# Set default LANG
-export LANG='en_US.UTF-8';
-export LC_ALL='en_US.UTF-8';
-
 # Default editor as vim
 export EDITOR='vim'
 
